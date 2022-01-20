@@ -7,20 +7,32 @@
     <link rel="stylesheet" href=".../css/style.css">
     <title>SUML - Ceny Nieruchomosci w Polsce</title>
 </head>
+<body>
 <div class="content" style="max-width: 850px; margin: auto">
-    <body>
-    <header>
-            <h1>SUML - Ceny Nieruchomosci w Polsce</h1>
+    <header style="margin: 1rem; padding: 1rem; text-align: center;">
             <img src="/static/logo.png" alt="logo" id="logo">
+            <h1 style="background-color: orange; border: 2px solid; border-radius: 2rem">SUML - Ceny Nieruchomosci w Polsce</h1>
     </header>
 
-        <h2>What do you want to do?</h2>
+    <div style="background-color: SandyBrown; border: 2px solid; text-align: center; border-radius: 2rem; padding-right: 1rem; padding-left: 1rem;">
         <p>
-            <a href="/wyborMiasta"><button>Przejdz do cen</button></a>
+            Na naszej stronie mozesz sie dowiedziec jaka bedzie przewidywana cena za metr kwadratowy nieruchomosci w wybranym miescie i roku.
         </p>
+        <p style="font-style: italic">Strona dokonuje obliczen na podstawie algorytmow - Machine Learning</p>
+        <p>Zapraszamy!</p>
+    </div>
+
+    <div style="display: flex; justify-content: center; flex-direction: row; align-items: center; margin-top: 5rem; margin-bottom: 4rem">
+        <h3 style="background-color: SandyBrown; border: 2px solid; text-align: center; padding: 1rem; border-radius: 2rem">W kolejnym kroku wybierzesz miasto:</h3 >
         <p>
-            <a href="/update"><button>Train model</button></a>
+            <a href="/wyborMiasta" style="margin: 3rem; ">
+                <button style="text; background-color: GreenYellow; padding: 1rem; border: inset; border-radius: 2rem; font-weight: bold;">Przejdz do cen</button>
+            </a>
         </p>
-    </body>
+        </div>
 </div>
+</body>
+<footer style="margin: 1rem; background-color: orange; padding: 1rem; text-align: center; border: 2px solid; border-radius: 2rem">
+    s18391, s1XXXX, s1XXXX - copyright 2022
+</footer>
 </html>
