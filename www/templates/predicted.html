@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUML - Lab 3</title>
+    <title>SUML - Ceny Nieruchomosci w Polsce</title>
 </head>
 <body>
-    <h1>SUML - Lab 3</h1>
-    <h3>Your Predicted Value: {{ x }}</h3>
+    <div class="content" style="max-width: 850px; margin: auto">
+        <header style="margin: 1rem; padding: 1rem; text-align: center;">
+                <img src="/static/logo.png" alt="logo" id="logo">
+                <h1 style="background-color: orange; border: 2px solid; border-radius: 2rem">SUML - Ceny Nieruchomosci w Polsce</h1>
+        </header>
 
-    <p> </p>
-    <a href="/predict"><button>Predict</button></a>
-    <p> </p>
-    <a href="/update"><button>Update and train model</button></a>
+        <div style="font-size: 20px; font-style: bold; background-color: SandyBrown; border: 2px solid; text-align: center; border-radius: 2rem; padding-right: 1rem; padding-left: 1rem;" >
+            <p style="font-weight: bold; text-align: center; ">
+                Przewidywana cena za metr kwadratowy: {{ x }}
+            </p>
+        </div>
+
+            <div style="display: flex; justify-content: center; flex-direction: row; align-items: center; margin-top: 5rem; margin-bottom: 4rem">
+                <a href="/" style="text-decoration: none; background-color: GreenYellow; font-size: 20px; padding: 1rem; border: inset; border-radius: 2rem; font-weight: bold; margin-left: 2rem" >Powrot do Menu</a>
+            </div>
+    </div>
 </body>
+<footer style="margin: 1rem; background-color: orange; padding: 1rem; text-align: center; border: 2px solid; border-radius: 2rem">
+    s18391, s19573, s18443 - copyright 2022
+</footer>
 </html>
-

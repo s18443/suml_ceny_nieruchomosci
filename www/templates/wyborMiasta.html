@@ -7,17 +7,33 @@
     <title>SUML - Ceny Nieruchomosci w Polsce</title>
 </head>
 <body>
-    <h1>SUML - Ceny Nieruchomosci w Polsce - wybierz miasto</h1>
+<div class="content" style="max-width: 850px; margin: auto">
+    <header style="margin: 1rem; padding: 1rem; text-align: center;">
+            <img src="/static/logo.png" alt="logo" id="logo">
+            <h1 style="background-color: orange; border: 2px solid; border-radius: 2rem">SUML - Ceny Nieruchomosci w Polsce</h1>
+    </header>
 
-    <form method="POST" action="/predict">
-        <select name="miasto" method="GET" action="/getMiasta">
-            {% for miasto in miasta %}
-            <option value="{{miasto}}" >{{ miasto }}</option>
-            {% endfor %}
-        </select>
-        <p><input type="submit" value="Predict"></p>
-    </form>
+    <div style="background-color: SandyBrown; border: 2px solid; text-align: center; border-radius: 2rem; padding-right: 1rem; padding-left: 1rem;">
+        <p style="font-style: italic">
+                Regresja liniowa – w modelowaniu statystycznym, metody oparte o liniowe kombinacje zmiennych i parametrów dopasowujących model do danych. Dopasowana linia lub krzywa regresji reprezentuje oszacowaną wartość oczekiwaną zmiennej y przy konkretnych wartościach innej zmiennej lub zmiennych x. W najprostszym przypadku dopasowana jest stała lub funkcja liniowa.
+        </p>
+        <p>Zapraszamy!</p>
+    </div>
 
+    <div style="display: flex; justify-content: center; flex-direction: row; align-items: center; margin-top: 5rem; margin-bottom: 4rem">
+        <h3 style="background-color: SandyBrown; border: 2px solid; text-align: center; padding: 1rem; border-radius: 2rem">Wybierz miasto:</h3 >
+        <form method="POST" style="display: flex; justify-content: center; flex-direction: row;" action="/predict">
+            <select name="miasto" method="GET" style="font-size: 25px; background-color: GreenYellow; padding: 1rem; border: inset; border-radius: 2rem; font-weight: bold; margin-left: 2rem" action="/getMiasta">
+                {% for miasto in miasta %}
+                <option value="{{miasto}}" style="font-size: 25px">{{ miasto }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" style="background-color: GreenYellow; font-size: 20px; padding: 1rem; border: inset; border-radius: 2rem; font-weight: bold; margin-left: 2rem" value="Potwierdz">
+        </form>
+    </div>
+</div>
 </body>
+<footer style="margin: 1rem; background-color: orange; padding: 1rem; text-align: center; border: 2px solid; border-radius: 2rem">
+    s18391, s19573, s18443 - copyright 2022
+</footer>
 </html>
-

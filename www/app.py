@@ -43,7 +43,13 @@ def predict():
     form = PredictForms()
     x = form.x.data
     form.miasto = request.form.get('miasto')
-    return render_template('predict.html', form=form)
+    i = 2006
+    j = 2022
+    lata = []
+    while i < j:
+        lata.append(i)
+        i += 1
+    return render_template('predict.html', form=form, lata=lata)
 
 @app.route('/update')
 def update():

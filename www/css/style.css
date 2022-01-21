@@ -1,19 +1,4 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body, html, h1, h2, h3 {
+    background-color: red;
+    text-color: blue;
 }
-html{
-    font-family: "Microsoft JhengHei UI", sans-serif;
-    font-size: large;
-    height: 100%;
-}
-h1{
-  border: 1px solid;
-  display: inline-block;
-}
-.content{
-    max-width: 500px;
-    margin: auto;
-}
-
