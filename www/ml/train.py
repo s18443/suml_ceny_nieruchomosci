@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 
-data_path = 'data/'
+data_path = '../data/'
 model_path = 'ml/data'
 
 def lr(data):
@@ -26,7 +26,7 @@ def add_values_train(a, b):
     pickle.dump(lr(inp), open(model_path, 'wb'))
 
 def learn(miasto):
-    pd.read_csv(data_path+miasto+'/'+miasto+'_pierwotny.csv')
+    data = pd.read_csv(data_path+miasto+'/'+miasto+'_pierwotny.csv')
 
     x = data['x'].values.reshape(-1, 1)
     y = data['y'].values.reshape(-1, 1)
@@ -34,4 +34,4 @@ def learn(miasto):
     linear_regressor = LinearRegression()
     linear_regressor.fit(x, y)
 
-    pickle.dump(linear_regressor, open(model_path, 'wb'))
+    pickle.dump(linear_regressor, open(model_path+'/'+miasto+'_pierwotny.pkl', 'wb'))

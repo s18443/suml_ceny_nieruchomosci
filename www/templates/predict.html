@@ -13,20 +13,18 @@
         <h1 style="background-color: orange; border: 2px solid; border-radius: 2rem">SUML - Ceny Nieruchomosci w Polsce</h1>
     </header>
 
-    <h3 style="background-color: SandyBrown; border: 2px solid; text-align: center; padding: 1rem; border-radius: 2rem">Wybrane {{ form.miasto }} tu powinno sie wyswietlic</h3 >
-        <div style="display: flex; justify-content: center; flex-direction: row; align-items: center; margin-top: 5rem; margin-bottom: 4rem;">
+    <div style="background-color: SandyBrown; border: 2px solid; text-align: center; border-radius: 2rem; padding-right: 1rem; padding-left: 1rem;">
+        <p style="font-style: italic">
+        Drogi Uzytkowniku,<br> Prosze o podanie roku dla ktorego chcesz dokonac predykcji ceny nieruchomosci w wybranym miescie
+        </p>
+    </div>
+
+        <div style="display: flex; justify-content: center; flex-direction: row; align-items: center; margin-top: 3rem; margin-bottom: 4rem;">
             <h3 style="background-color: SandyBrown; border: 2px solid; text-align: center; padding: 1rem; border-radius: 2rem">Podaj Rok:</h3 >
 
         <form method="POST" style="display: flex; justify-content: center; flex-direction: row; align-items: center;" action="/predicted">
-            {{ form.crsf_token }}
-            <!-- <p> {{ form.x.label }} </p> -->
             <p style="margin-left: 2rem"> {{ form.x }} </p>
-            <!-- TO TUTAJ WYZEJ LINIJKA 22 DO USUNIECIA, TRZEBA PODMIENIC ABY BRALO WARTOSC Z LISTY PONIZEJ :) -->
-            <select name="rok" style="font-size: 25px; background-color: GreenYellow; padding: 1rem; border: inset; border-radius: 2rem; font-weight: bold; margin-left: 2rem">
-                {% for rok in lata %}
-                <option value="{{ rok }}" style="font-size: 25px">{{ rok }}</option>
-                {% endfor %}
-            </select>
+            <p style="display: none"> {{ form.miasto }} </p>
             <input type="submit" style="background-color: GreenYellow; font-size: 20px; padding: 1rem; border: inset; border-radius: 2rem; font-weight: bold; margin-left: 2rem" value="Oblicz">
         </form>
 

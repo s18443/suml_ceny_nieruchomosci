@@ -39,10 +39,8 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     form = PredictForms()
-    x = form.x.data
-    form.miasto = request.form.get('miasto')
-    lata = [2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022]
-    return render_template('predict.html', form=form, lata=lata)
+    form.miasto.data = request.form.get('miasto')
+    return render_template('predict.html', form=form)
 
 @app.route('/update')
 def update():
@@ -54,7 +52,7 @@ def update():
 @app.route('/predicted', methods=['POST'])
 def predicted():
     x = make_prediction(request.form.get('x'), request.form.get('miasto'))
-    return render_template('predicted.html', x=x)
+    return render_template('predicted.html', x=str(round(x, 2)))
 
 @app.route('/trained', methods=['POST'])
 def trained():
